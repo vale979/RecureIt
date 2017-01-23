@@ -8,10 +8,15 @@ fakt x =
  
 main :: IO()
 main = do
+  putStr "Masukkan sebuah bilangan bulat : "
+  hFlush stdout
   x <- readLn
-  putStr "Fibonacci ke-x adalah : "
+  putStr "Fibonacci ke-"
+  putStr (show x)
+  putStr " adalah : "
   hFlush stdout
   print (fibo x)
-  putStr "x! = "
+  putStr (show x)
+  putStr "! = "
   hFlush stdout
   print (fakt x)
